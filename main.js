@@ -45,7 +45,15 @@ function game(){
     return compMove;
   }
     compMove = compMove();
-    console.log(compMove);
+    if (compMove == "r"){
+      prompt("The computer has chosen Rock");
+    }
+    else if (compMove == "p"){
+      prompt("The computer has chosen Paper");
+    }
+    else if (compMove == "s") {
+      prompt("The computer has chosen Scissors");
+    }
 
     function outcome(mve) {
     var playerMove = mve;
@@ -70,7 +78,6 @@ function game(){
     return result;
   }
     outcome = outcome(move);
-    console.log(outcome);
 
     if (outcome == "w"){
       pScore += 1;
@@ -85,8 +92,6 @@ function game(){
       alert("It's a tie! The score is : Player- " + pScore + " and CPU- " + cScore);
 
     }
-    console.log(pScore);
-    console.log(cScore);
   }
 
   if (pScore == 3){
